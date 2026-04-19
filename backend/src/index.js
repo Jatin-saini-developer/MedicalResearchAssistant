@@ -20,9 +20,8 @@ app.use(express.json());
 app.use('/api', chatRoutes);
 
 
-// Test route
-app.get('/', (req, res) => {
-  res.json({ message: 'Medical Research Assistant API is running' });
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
 });
 
 app.get('/test-pubmed', async (req, res) => {
