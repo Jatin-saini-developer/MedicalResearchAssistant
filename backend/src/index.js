@@ -14,7 +14,13 @@ const chatRoutes = require('./routes/chatRoutes');
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://medical-research-assistant-phi.vercel.app'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 app.use('/api', chatRoutes);
