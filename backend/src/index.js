@@ -15,10 +15,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://medical-research-assistant-phi.vercel.app'
-  ],
+  origin: "*",
   credentials: true
 }));
 app.use(express.json());
